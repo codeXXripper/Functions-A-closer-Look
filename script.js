@@ -265,6 +265,8 @@ answers: new Array(4).fill(0),
 };
 
 */
+
+/* 
 const poll = {
   question: 'What is your favorite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3:C++'],
@@ -290,22 +292,6 @@ const poll = {
 
     this.displayResults();
     this.displayResults('string');
-    // if (input === NaN) {
-    //   // console.log(`The input data ${input} is not a number`);
-    // } else if (input >= 0 && input <= 3) {
-    //   const [index, value] = this.options;
-    //   console.log(index, value);
-    //   console.log(...this.options);
-    //   if (this.options.keys(input) === input) {
-    //     this.answers[input]++;
-    //     console.log(this.answers[input]);
-    //   }
-    // }
-    // for (const option in this.options) {
-    //   if (userPrompt === option) {
-    //     console.log(`Your inserted option is ${option}`);
-    //   }
-    // }
   },
   displayResults(type = 'array') {
     if (type === 'array') {
@@ -316,7 +302,6 @@ const poll = {
     }
   },
 };
-// console.log(poll.options);
 // poll.registerNewAnswer();
 
 document
@@ -326,3 +311,16 @@ document
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+ */
+
+const once = function () {
+  console.log('this will never run again');
+};
+once();
+//IIFE
+(function () {
+  console.log('this will never run again');
+})();
+//Arrow function
+(() => console.log('This will never run again'))();
+
